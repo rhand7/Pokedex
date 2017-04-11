@@ -6,6 +6,77 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Pokemon View Controller-->
+        <scene sceneID="n9L-gp-iC1">
+            <objects>
+                <viewController id="bS6-Mb-d19" customClass="PokemonViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8b3-hc-qSd"/>
+                        <viewControllerLayoutGuide type="bottom" id="rIA-sD-b4U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IKJ-WY-DeJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-f5-v6U">
+                                <rect key="frame" x="38" y="164" width="300" height="101.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuC-BW-Ppr">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtE-bK-BQc">
+                                        <rect key="frame" x="0.0" y="40.5" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abilities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKM-H6-RgR">
+                                        <rect key="frame" x="0.0" y="81" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rKM-H6-RgR" firstAttribute="centerX" secondItem="iaN-f5-v6U" secondAttribute="centerX" id="0of-c0-gu5"/>
+                                    <constraint firstAttribute="width" constant="300" id="DbB-LE-122"/>
+                                    <constraint firstItem="rKM-H6-RgR" firstAttribute="centerX" secondItem="iaN-f5-v6U" secondAttribute="centerX" id="JXh-Fk-bvl"/>
+                                    <constraint firstItem="xtE-bK-BQc" firstAttribute="centerX" secondItem="iaN-f5-v6U" secondAttribute="centerX" id="nov-eS-bwU"/>
+                                    <constraint firstItem="kuC-BW-Ppr" firstAttribute="centerX" secondItem="iaN-f5-v6U" secondAttribute="centerX" id="vBA-rU-stv"/>
+                                    <constraint firstItem="xtE-bK-BQc" firstAttribute="centerX" secondItem="iaN-f5-v6U" secondAttribute="centerX" id="voN-Ya-Mwd"/>
+                                    <constraint firstItem="kuC-BW-Ppr" firstAttribute="centerX" secondItem="iaN-f5-v6U" secondAttribute="centerX" id="y4g-h5-g16"/>
+                                </constraints>
+                            </stackView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="seu-SD-FKs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="seu-SD-FKs" firstAttribute="centerX" secondItem="iaN-f5-v6U" secondAttribute="centerX" id="7S0-T1-pm3"/>
+                            <constraint firstItem="seu-SD-FKs" firstAttribute="leading" secondItem="IKJ-WY-DeJ" secondAttribute="leading" id="XR1-al-R4b"/>
+                            <constraint firstItem="seu-SD-FKs" firstAttribute="top" secondItem="8b3-hc-qSd" secondAttribute="bottom" id="edW-fG-zXr"/>
+                            <constraint firstItem="iaN-f5-v6U" firstAttribute="top" secondItem="seu-SD-FKs" secondAttribute="bottom" constant="100" id="yJi-BM-8Sj"/>
+                            <constraint firstItem="iaN-f5-v6U" firstAttribute="centerX" secondItem="IKJ-WY-DeJ" secondAttribute="centerX" id="zZo-dD-I8G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="rKM-H6-RgR" id="zs7-ry-tcf"/>
+                        <outlet property="idLabel" destination="xtE-bK-BQc" id="YVJ-Sl-jCQ"/>
+                        <outlet property="nameLabel" destination="kuC-BW-Ppr" id="2sy-zw-XAM"/>
+                        <outlet property="searchBar" destination="seu-SD-FKs" id="BIf-Ze-fzY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8eK-51-HLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="154.27286356821591"/>
+        </scene>
+    </scenes>
 </document>
