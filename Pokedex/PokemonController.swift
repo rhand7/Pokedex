@@ -19,7 +19,7 @@ class PokemonController {
             return
         }
         
-        let searchURL = url.appendingPathComponent(searchTerm)
+        let searchURL = url.appendingPathComponent(searchTerm.lowercased()) 
         
         NetworkController.performRequest(for: searchURL, httpMethod: .get) { (data, error) in
             guard let data = data,
