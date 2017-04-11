@@ -74,7 +74,6 @@
                         <outlet property="abilitiesLabel" destination="rKM-H6-RgR" id="zs7-ry-tcf"/>
                         <outlet property="idLabel" destination="xtE-bK-BQc" id="YVJ-Sl-jCQ"/>
                         <outlet property="nameLabel" destination="kuC-BW-Ppr" id="2sy-zw-XAM"/>
-                        <outlet property="searchBar" destination="seu-SD-FKs" id="BIf-Ze-fzY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eK-51-HLU" userLabel="First Responder" sceneMemberID="firstResponder"/>

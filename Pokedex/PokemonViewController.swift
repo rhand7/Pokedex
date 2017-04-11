@@ -23,7 +23,6 @@ class PokemonViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var abilitiesLabel: UILabel!
